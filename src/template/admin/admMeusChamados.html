@@ -15,7 +15,7 @@
         <div class="conteint"> 
                 <div id="divFlexDirection">
                     <p>Numero do chamado:&nbsp</p>
-                    <input type="text" placeholder="Numero do chamado">
+                    <input id="numeroChamado" type="number" placeholder="Numero do chamado">
                 </div>
                 <div id="divFlexDirection">
                     <p>Data inicio: &nbsp </p>
@@ -26,14 +26,14 @@
 
                 <div class="boxConteiner">
                     <div class="filtros">
-                        <p id="filtroParagrafo">N.Chamado | Nome Usuario | data</p>
+                        <p id="filtroParagrafo">| N.Chamado | Nome Usuario | data |</p>
                     </div>
-                    <div>Proucurar Item</div>
+                    <div>Nenhum item listado!</div>
                 </div>
 
                 <div id="divFlexDirection">
                     <p>Abertura do chamado: &nbsp &nbsp</p>
-                    <input type="" disabled placeholder="00/00/0000">
+                    <input type="" disabled placeholder="00/00/0000" id="aberturaChamado">
                 </div>
 
                 <div id="divFlexDirection">
@@ -52,9 +52,10 @@
                 </div>
                 <div id="divFlexDirectionButton">
                     <a href="./admIndex.html"><button  id="buttonVoltar" >Voltar</button></a>
-                    <button  id="buttonEnviar" onclick="">Buscar</button>
+                    <button  id="buttonEnviar" onclick="BuscarChamado()">Buscar</button>
                 </div>
         </div>
     </div>
+    <script src="../../JS/meusChamados.js"></script>
 </body>
 </html>
