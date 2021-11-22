@@ -1,0 +1,90 @@
+*{
+}
+body{
+    background-image: url("../img/background.jpeg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.boxConteiner{
+ height: 200px;
+ width: 500px;
+ background-color: transparent;
+ border-radius: 10px;
+ border: 1px solid;
+ width: 520px;
+ height: 200px;
+ overflow: auto;
+
+ text-align: center;
+
+}
+#filtroParagrafo {
+    color: white;
+    font: 5px;
+    
+}
+.conteiner{
+    display: flex;
+    margin-left: 100px;
+    align-items: center;
+}
+.conteint{
+    flex-direction: row;
+}
+.imagem{
+    float: right;
+}
+input{
+    border-radius: 10px;
+    height: 25px;
+}
+textarea{
+    border-radius: 5px;
+    height: 70px;
+    width: 430px;
+   
+}
+#divFlexDirection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#divFlexDirectionButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 100px;
+}
+
+button{
+    border-radius: 5%;
+    height: 40px;
+    width: 120px;
+    border-color: #005679;
+    margin-top: 20px;
+}
+
+#buttonVoltar{
+    border-radius: 5px;
+    background-color: #005679;
+    margin-left: 20px;
+    color: white;
+    border-color: #005679;
+}
+#buttonEnviar{
+    border-radius: 5px;
+    background-color: #005679;
+    margin-left: 110px;
+    color: white;
+    background-color: #005679;
+}
+p{
+    font-size: 20px;
+}
+
+.filtros{
+    background-color: #005679;
+    height: 20px;
+}

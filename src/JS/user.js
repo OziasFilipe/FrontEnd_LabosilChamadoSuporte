@@ -1,20 +1,19 @@
-    
-let ApiUserGet = "http://localhost:8080/basicNomeUsuario?basicNomeUsuario=";
-let nomeUsuario = "ozias filipe"
-alert(ApiUserGet)
-let nomeUsuario = "a";
-let senha = "a";
 
+const ApiUserGet = "http://localhost:8080/basicNomeUsuario?basicNomeUsuario=";
+var nomeUsuario = "ozias filipe"
 
-function Validar(){
+var nomeUsuario = "";
+var senha = "";
 
+function validar(){
     if( nomeUsuario != "" && senha != "" ){
         //API_GET usuario
         fetch(ApiUserGet+nomeUsuario).then(response =>{
             return response.json();
               }).then(data =>{ 
-                  console.log(data)         
+                  console.log(data)
           })
+         
     }
     else{
         alert("Seu usuario ou senha esta incorreto!")

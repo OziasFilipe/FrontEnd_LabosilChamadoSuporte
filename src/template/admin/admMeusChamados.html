@@ -4,13 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/meusChamados.css">
     <title>Meus Chamados</title>
-    
 </head>
 <body>
-    <div>
-
+    <div class="imagem">
+        <img src="../../img/LOGO.png" alt="" height="100px">
     </div>
- 
+    <div class="conteiner">
+        <div class="conteint"> 
+                <div id="divFlexDirection">
+                    <p>Numero do chamado:&nbsp</p>
+                    <input type="text" placeholder="Numero do chamado">
+                </div>
+                <div id="divFlexDirection">
+                    <p>Data inicio: &nbsp </p>
+                    <input type="date" width="100px"> &nbsp
+                    <p>Data Final: &nbsp </p>
+                    <input type="date" width="100px">
+                </div>
+
+                <div class="boxConteiner">
+                    <div class="filtros">
+                        <p id="filtroParagrafo">N.Chamado | Nome Usuario | data</p>
+                    </div>
+                    <div>Proucurar Item</div>
+                </div>
+
+                <div id="divFlexDirection">
+                    <p>Abertura do chamado: &nbsp &nbsp</p>
+                    <input type="" disabled placeholder="00/00/0000">
+                </div>
+
+                <div id="divFlexDirection">
+                    <p>Fechamento do chamado</p>
+                    <input type="" disabled placeholder="00/00/0000">
+                </div>
+
+                <div id="divFlexDirection">
+                    <p>Descrição</p>
+                    <textarea disabled placeholder="Descrição"></textarea>
+                </div>
+
+                <div id="divFlexDirection">
+                    <p>Resolução</p>
+                    <textarea disabled placeholder="Descrição"></textarea>
+                </div>
+                <div id="divFlexDirectionButton">
+                    <a href="./admIndex.html"><button  id="buttonVoltar" >Voltar</button></a>
+                    <button  id="buttonEnviar" onclick="">Buscar</button>
+                </div>
+        </div>
+    </div>
 </body>
 </html>

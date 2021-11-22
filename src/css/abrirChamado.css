@@ -45,7 +45,7 @@ button{
     border-radius: 5%;
     height: 40px;
     width: 120px;
-    border-color: #E4DEDE;
+    border-color: #005679;
     margin-top: 20px;
 }
 #buttonVoltar{
@@ -60,7 +60,7 @@ button{
     background-color: #005679;
     margin-left: 110px;
     color: white;
-    border-color: #005679;
+    background-color: #005679;
 }
 
 .divSelectSetor{
