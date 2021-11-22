@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="../../css/abrirChamado.css">
+    <title>abrir Chamado</title>
+</head>
+<body>
+    <div class="divImagem">
+        <img src="../../img/LOGO.png" class="imagem"/>
+      </div>
+    <div class="conteiner">
+        <div class="content">
+              <div class="divSelectSetor">
+                  <p>Setor: &nbsp</p>
+                    <select name="selectSetor" id= "selectSetor" style="width:210px">
+                        <option value="EXPEDIÇÃO">EXPEDIÇÃO</option>
+                        <option value="FATURAMENTO" selected>FATURAMENTO</option>
+                        <option value="RH">RH</option>
+                        <option value="TELEVENDAS">TELEVENDAS</option>
+                        <option value="COMERCIAL">COMERCIAL</option>
+                        <option value="COMPRAS">COMPRAS</option>
+                        <option value="COBRANÇA">COBRANÇA</option>
+                        <option value="DOCUMENTAÇÃO">DOCUMENTAÇÃO</option>
+                        <option value="FINANCEIRO">FINANCEIRO</option>
+                    </select>
+              </div>
+              <div class = "divSelectTipo">
+                <p>Tipo:  &nbsp</p>
+                <select name="selectTipo" id="selectTipo" style="width:220px">
+                    <option value="DÚVIDAS">DÚVIDAS</option>
+                    <option value="SUPORTE">SUPORTE</option>
+                </select>
+              </div>
+              <div  class = "divSelectPrioridade">
+                <p>Prioridade: &nbsp</p>
+                <select name="selectPrioridade" id="selectPrioridade">
+                    <option value="BAIXA">BAIXA</option>
+                    <option value="MÉDIA">MÉDIA</option>
+                    <option value="ALTA">ALTA</option>
+                </select>
+              </div>
+              <div class="divImagem">
+                <p>Descrição: </p>
+                <textarea id = "divtextarea"  maxlength="250" placeholder="Descrição: Max-Caracteres(250)"></textarea>
+            </div>
+            <div>
+                <a href="./admIndex.html"><button  id="buttonVoltar" >Voltar</button></a>
+                <button  id="buttonEnviar" onclick="OpenChamada()">Enviar solitação</button>
+            </div>
+            <p id="usuario">Usuario:<p></p>...</p>
+            <script src="../../JS/abrirChamada.js"></script>
+        </div>
+    </div>
+    
+      </body>
+</html>

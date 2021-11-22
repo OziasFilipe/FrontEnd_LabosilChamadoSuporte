@@ -1,0 +1,87 @@
+
+
+.conteiner{
+   
+  
+}
+body{
+    background-image: url("../img/background.jpeg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+
+.imagem{
+    width: 300px;
+    float: right;
+}
+
+
+
+select{
+    border-radius: 50px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+p{
+    font-size: 30px;
+}
+
+.content{
+    margin: 30px 0px 0px 150px;
+}
+
+textarea{
+    width: 400px;
+    height: 100px;
+   
+}
+
+button{
+    border-radius: 5%;
+    height: 40px;
+    width: 120px;
+    border-color: #E4DEDE;
+    margin-top: 20px;
+}
+#buttonVoltar{
+    border-radius: 5px;
+    background-color: #005679;
+    margin-left: 20px;
+    color: white;
+    border-color: #005679;
+}
+#buttonEnviar{
+    border-radius: 5px;
+    background-color: #005679;
+    margin-left: 110px;
+    color: white;
+    border-color: #005679;
+}
+
+.divSelectSetor{
+    display: flex;
+   
+   align-items: center;
+}
+.divSelectTipo{
+    display: flex;
+    
+    align-items: center;
+}
+.divSelectPrioridade{
+    display: flex;
+   
+    align-items: center;
+}
+
+#divtextarea{
+    border-radius: 10px;
+}
+#usuario{
+    margin-top: 60px;
+}

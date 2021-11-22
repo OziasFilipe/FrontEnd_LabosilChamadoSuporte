@@ -1,0 +1,61 @@
+*{
+    margin: 0%;
+    padding: 0%;
+  
+  }
+  body{
+    background-image: url("./src/img/background.jpeg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+ 
+  
+}
+#buttonUser{
+height: 35px;
+width: 100px;
+background-color:#005679 ;
+border-radius: 6px;
+color: white;
+border-color: #005679;
+} 
+
+#buttonUserSenha{
+  height: 35px;
+  width: 100px;
+  background-color:#005679 ;
+  border-radius: 6px;
+  margin-right: 50px;
+  color: white;
+  border-color: #005679;
+  } 
+
+#inputUser{
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  
+}
+
+
+.divButtonUser{
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+#logoIndex{
+  margin-left: 100px;
+}

@@ -1,0 +1,59 @@
+
+.conteiner{
+
+        margin-left: 60px;
+    }
+    .content{
+        margin-left: 50px;
+    }
+    body{
+        background-image: url("../img/background.jpeg");
+        height: 500px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+    }
+    
+    .imagem{
+        height: 200px;
+        float: right;
+        margin-top: 70px;
+        margin-right: 30px;
+        margin-left: 400px;
+      }
+    p{
+        color: black;
+        text-align: left;
+        font-size: 30px;
+        text-decoration:none;
+    }
+    .cadastrousuario{
+        margin: 25px 0px 15px 0px;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:hover p{
+       color: red;
+
+
+    }
+    
+    .content{
+      flex-direction: row;
+      float: left;
+      margin: 50px 0px 0px 30px;
+    }
+
+   
+     .content .cadastrousuario {
+        padding: 20px;
+        margin: 20px;
+     }
+
+     @media only screen and (max-width: 200px) {
+       
+        .imagem{
+            height: 300px;
+        }
+      }
