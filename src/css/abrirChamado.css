@@ -1,9 +1,4 @@
 
-
-.conteiner{
-   
-  
-}
 body{
     background-image: url("../img/background.jpeg");
     height: 500px; /* You must set a specified height */
@@ -84,4 +79,9 @@ button{
 }
 #usuario{
     margin-top: 60px;
+}
+
+
+p{
+    color: black;
 }

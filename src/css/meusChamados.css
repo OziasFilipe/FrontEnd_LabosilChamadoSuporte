@@ -1,5 +1,4 @@
-*{
-}
+
 body{
     background-image: url("../img/background.jpeg");
     height: 500px; /* You must set a specified height */
@@ -12,18 +11,36 @@ body{
  width: 500px;
  background-color: transparent;
  border-radius: 10px;
- border: 1px solid;
- width: 520px;
+ border: 1px solid rgb(0, 0, 0);
+ width: 570px;
  height: 200px;
  overflow: auto;
 
  text-align: center;
 
 }
-#filtroParagrafo {
-    color: white;
+#filtroTd {
+    color: black;
     font: 5px;
-    
+   
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    height: 30px;
+}
+#filtroTdSituacao{
+    color: greenyellow;
+    font: 5px;
+    background-color: #417549;
+    height: 50px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+#filtroTh{
+    color: black;
+    font: 5px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
 }
 .conteiner{
     display: flex;
@@ -50,6 +67,7 @@ textarea{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 #divFlexDirectionButton{
     display: flex;
@@ -85,6 +103,49 @@ p{
 }
 
 .filtros{
+    color: black;
+    height: 25px;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#table{
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+.borderBox{
+display:flex;
+flex-direction: row;
+color: black;
+align-items: center;
+justify-content: center;
+border: 1px solid black;
+border-radius: 5px;
+height: 25px;
+
+
+}
+
+#buttonFiltro{
     background-color: #005679;
-    height: 20px;
+    
+}
+
+
+
+.tbody-white{
+    background-color: white;
+    
+}
+
+#selectSituacao{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
