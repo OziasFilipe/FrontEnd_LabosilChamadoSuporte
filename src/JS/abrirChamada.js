@@ -2,12 +2,18 @@ var selectSetor = document.getElementById('selectSetor');
 var selectTipo = document.getElementById('selectTipo');
 var selectPrioridade = document.getElementById('selectPrioridade');
 var textoDescricao = document.getElementById('divtextarea')
+var divtextarea = document.getElementById('divtextarea')
+
 let data = new Date();
 let dataAno = data.getFullYear()
+let dataMes = data.getMonth() + 1
+let dataDia = data.getDate()
+data = (dataDia+"/"+dataMes+"/"+dataAno)
 
 const UrlGet= "http://localhost:8080/admServicoAll";
 const UrlPost= "http://localhost:8080/basicAAbrirChamado"
-
+const nomeUsuario = localStorage.getItem('nome');
+var usuario = document.getElementById("usuario").innerHTML = "Usuario: "+nomeUsuario
 
  const nome_usuario = "";
  const setor = "";
@@ -18,12 +24,17 @@ const UrlPost= "http://localhost:8080/basicAAbrirChamado"
  const protocolo_chamado = 0;
  const data_chamado = "";
 
-
-
 function  OpenChamada(){ 
-    postAbrirChamado();
+    if(divtextarea.value != ""){
+        postAbrirChamado();
+        var toastHTML = `<span>O seu chamado foi criado com sucesso</b></span>`;
+        M.toast({html: toastHTML});
+    }
+    else{
+        var toastHTML = `<span>Desculpe o campo descrição está vazio</b></span>`;
+        M.toast({html: toastHTML});
+    }
 }
-
     //////////////////////////////
      //GET request Chamado
     //////////////////////////////
@@ -43,11 +54,8 @@ const postAbrirChamado = ()=>{
     let valueSelectSetor = selectSetor.options[selectSetor.selectedIndex].value;
     let valueSelectTipo = selectTipo.options[selectTipo.selectedIndex].value;
     let valueSelectPrioridade = selectPrioridade.options[selectPrioridade.selectedIndex].value;
-    console.log("setor: "+valueSelectSetor)
-    console.log("Tipo: "+valueSelectTipo)
-    console.log("Prioridade: "+valueSelectPrioridade)
     //Protocolo Gerado aleatoriamente
- 
+    
     let protocolo = ""
     let aleatorio =  Math.floor(Math.random() * (9999 - 1 + 1)) + 1
     protocolo = protocolo + aleatorio
@@ -55,27 +63,31 @@ const postAbrirChamado = ()=>{
 //////////////////////////////////
 
     let _data = {
-        nome_usuario: "null",
+        nome_usuario: nomeUsuario,
         setor: valueSelectSetor,
         desc_chamado: textoDescricao.value,
-        andamento_chamado: "aberto",
+        andamento_chamado: "ABERTO",
         tipo_chamado: valueSelectTipo,
         prioridade_chamado: valueSelectPrioridade,
         protocolo_chamado: protocolo,
-        data_chamado: "null"
+        data_chamado: data
     }
         //API_POST 255 
+
     fetch(UrlPost, {
         method: "POST",
         body: JSON.stringify(_data),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
     .then(response => response.json()) 
-    .then(json => console.log(json));
-     alert("O seu codigo do chamado é  #"+protocolo+"#</b>")
+
+     textoDescricao.value = ""
+     var toastHTML = `<span>O seu código do chamado é  # ${protocolo} #</b></span>`;
+        M.toast({html: toastHTML});
+     
+    
 }
 //////////////////////////////
  //////////////////////////////
 //////////////////////////////
-
 

@@ -1,0 +1,350 @@
+*{
+    margin: 0%;
+    padding: 0%;
+  }
+  body{
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+}
+  #inputNomeCompleto{
+    border: 0;
+    background: none;
+    display: block;
+    margin:10px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+  #inputNomeUsuario{
+    border: 0;
+    background: none;
+    display: block;
+    margin:5px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+#inputUser{
+  border: 0;
+  background: none;
+  display: block;
+  margin:5px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+#inputSenha{
+  border: 0;
+  background: none;
+  display: block;
+  margin:5px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+#logoIndex{
+  margin-left: 25px;
+  margin-top: 20px;
+}
+#inputSelect{
+  border: 0;
+  background: none;
+  display: block;
+  margin:10px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 160px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  }
+  a{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  .content{
+    display: block;
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    background: #00014c32;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(108, 108, 108, 0.231);
+    border-radius: 12px;
+  }
+  .boxUsuario{
+    display: flex;
+    flex-direction: row;
+  }
+  .divButtonUser{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  #buttonUserSenha{
+  margin-left: 15px;
+} 
+  button{
+    border: none;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 25px;
+    outline: none;
+    color: white;
+    border-radius: 12px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  #buttonUser:hover{
+      background-color: #2ecc71 ;
+      color: white;
+      font-weight: bold;
+  }
+  #buttonUserSenha:hover{
+    background-color: #2ecc71 ;
+    color: white;
+    font-weight: bold;
+  }
+    h1{
+      color: white;
+      font-family: 'Roboto';
+      margin-top: 10px;
+      font-size: large;
+      margin-top: 25px;
+      margin-bottom: 5px;
+      }
+      #inputSenha::placeholder{
+        color: rgba(255, 255, 255, 0.096);
+      }
+      #inputSenha:focus{
+        width: 280px;
+        border-color: #2ecc71;
+        font-weight: bold;
+      }
+      #inputNomeUsuario::placeholder{
+        color: rgba(255, 255, 255, 0.096);
+      }
+      #inputNomeUsuario:focus{
+        width: 280px;
+        border-color: #2ecc71;
+        font-weight: bold;
+      }
+      #inputSenha::placeholder{
+        color: rgba(255, 255, 255, 0.096);
+      }
+      #inputSenha:focus{
+        width: 280px;
+        border-color: #2ecc71;
+        font-weight: bold;
+      }
+      #inputUser::placeholder{
+        color: rgba(255, 255, 255, 0.096);
+      }
+      #inputUser:focus{
+        width: 280px;
+        border-color: #2ecc71;
+        font-weight: bold;
+      }
+
+      #inputSelect:focus{
+        border-color: #2ecc71;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.61);
+      }
+      img{
+
+        height: 100px;
+      }
+      /* ============= Animation background ========= */
+
+.cube {
+  position: absolute;
+  top: 60;
+  left: 30vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #d7d4e44f;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 5s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #d7d4e44f ;
+}
+.cube:nth-child(2) {
+  animation-delay:  0,3s;
+  left: 40vw;
+  top: 60vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 0,5s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay:  5s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+/* ================= Header ============ */
+header{
+  position: absolute;
+  top:0%;
+  left: 0%;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+/* navbar */
+nav{
+  color: #FFF;
+  float: right;
+  margin:30px 90px;
+}
+nav ul{
+  list-style: none;
+}
+nav ul li {
+  float: left;
+  transition: .3s;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #EFEEF5;
+  transition: .5;
+  font-size: 15px;
+  margin-left:16px;
+}
+nav ul li:hover a{
+  text-decoration: none;
+  color: #591BC5;;
+}
+nav ul li:hover{
+  height: 45px;
+  padding-top: 30px;
+  margin-top: -30px;
+ background: #EFEEF5;
+  text-decoration: none;
+  transform: skew(15deg);
+}
+/* Logo */
+.logo{
+  width: 35px;
+  height: 35px;
+  
+  margin: 40px 63px;
+  float: right;
+  
+}
+.logo span{
+  color: #591BC5;
+  font-size: 2em;
+  line-height: 1.4;
+  padding-left: 5px;
+  font-weight: bold;
+}
+/* Header content & title & button*/
+.header-content{
+  margin-top:25%;
+  text-align: center;
+  color:  #EFEEF5;
+}
+.header-content h1{
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 1px;
+}
+.header-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 20px auto;
+}
+.header-content button{
+  width: 140px;
+  margin:20px 10px;
+  color: #591BC5;
+  font-size: 17px;
+  border:1px solid #EFEEF5;
+  font-weight: 500;
+  background: #EFEEF5;
+  border-radius: 20px;
+  padding: 10px;
+  cursor:pointer;
+  transition: .3s;
+}
+.header-content button:hover{
+  border-radius: 0;
+}
+/* Animate Background*/
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}

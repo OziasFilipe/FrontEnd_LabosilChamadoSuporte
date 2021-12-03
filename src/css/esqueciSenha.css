@@ -1,113 +1,119 @@
-body{
-    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
-    background-size: 400% 400%;
-    animation: Gradient 15s ease infinite;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    padding:0;
-    margin:0px;
-}
-.divImagem{
-    align-items: center;
+*{
+    margin: 0%;
+    padding: 0%;
+  
+  }
+  body{
+    background-image: url("./../img/background.jpeg");
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+   
     
-}
-.conteiner{
-    margin-left: 60px;
-    width: 300px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    background: #00014c32;
-    text-align: center;
-    box-shadow: 0 8px 32px 0 rgba(108, 108, 108, 0.231);
-    border-radius: 12px;
-    }
-    .content{
-        float: left;
-        margin: 0px 0px 0px 30px;
-      }
-    #sair{
-        float: left;
-    }
-    .imagem{
-        height: 200px;
-        float: right;
-        margin-right: 30px;
-        margin-top: 2%;
-       }
+  }
+  #buttonUser{
+  height: 35px;
+  width: 100px;
+  background-color:#005679 ;
+  border-radius: 6px;
+  color: white;
+  border-color: #005679;
+  } 
+  
+  #buttonVoltar{
+    height: 35px;
+    width: 100px;
+    background-color:#005679 ;
+    border-radius: 6px;
+    margin-right: 50px;
+    color: white;
+    border-color: #005679;
+    text-decoration: none;
+    } 
     a{
-        text-decoration:none;
-    }
-    a:hover p{
-       color: red;
-    }
-    p{
+        text-decoration: none;
         color: white;
-        text-align: left;
-        font-size: 30px;
-        text-decoration:none;
     }
-     .content .cadastrousuario {
-        padding: 10px;
-        margin: 20px;
-     }
-     @media only screen and (max-width: 200px) {
-        .imagem{
-            height: 300px;
-        }
-      }
-#inativoUser{
-    color: rgba(133, 11, 11, 0.582);
-    text-decoration:underline;
-}
+  
+  #inputUser{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    
+  }
+  
+  #inputEmail{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+  }
+  
+  
+  .divButtonUser{
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 50px;
+    color: white;
+  }
+  
+  #logoIndex{
+    margin-left: 100px;
+  }
+
+  #inputSelect{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    margin-top: 20px;
+    margin-left: 70px;
+  }
+
+ p{
+     margin-left: 70px;
+     margin-top: 20px;
+     text-decoration: none;
+
+ }
 
 
-.content .cadastrarUser{
-    margin-top: 10px;
-}
-
-.container-fluid{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background: #FFF;
-}
 /* ============= Animation background ========= */
-.background {
-  background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
-  background-size: 400% 400%;
-  animation: Gradient 15s ease infinite;
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  padding:0;
-  margin:0px;
-}
+
 .cube {
   position: absolute;
-  top: 80vh;
-  left: 45vw;
+  top: 60;
+  left: 30vw;
   width: 10px;
   height: 10px;
-  border: solid 1px #D7D4E4;
+  border: solid 1px #d7d4e44f;
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 5s ease-in forwards infinite;
 }
 .cube:nth-child(2n) {
-  border-color: #FFF ;
+  border-color: #d7d4e44f ;
 }
 .cube:nth-child(2) {
   animation-delay:  0,3s;
-  left: 25vw;
-  top: 40vh;
+  left: 40vw;
+  top: 60vh;
 }
 .cube:nth-child(3) {
   animation-delay: 0,5s;
@@ -240,3 +246,6 @@ nav ul li:hover{
     opacity: 0;
   }
 }
+
+
+
