@@ -196,6 +196,10 @@
 
         height: 100px;
       }
+
+      input{
+        text-transform: uppercase;
+      }
       /* ============= Animation background ========= */
 
 .cube {
@@ -276,7 +280,7 @@ nav ul li:hover{
   margin-top: -30px;
  background: #EFEEF5;
   text-decoration: none;
-  transform: skew(15deg);
+  transform: skew(8deg);
 }
 /* Logo */
 .logo{
@@ -296,7 +300,7 @@ nav ul li:hover{
 }
 /* Header content & title & button*/
 .header-content{
-  margin-top:25%;
+  margin-top:50%;
   text-align: center;
   color:  #EFEEF5;
 }
@@ -341,7 +345,7 @@ nav ul li:hover{
 @keyframes cube {
   from {
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
+    opacity: 0.2;
   }
   to {
     transform: scale(20) rotate(960deg) translate(-50%, -50%);

@@ -49,9 +49,9 @@
        border-bottom: 1px solid white;
    }
    .conteiner{
-       display: flex;
-       margin-left: 100px;
+      
        align-items: center;
+       justify-content: center;
    }
    .conteint{
        flex-direction: row;
@@ -158,6 +158,8 @@
        margin-bottom: 10px;
    }
 
+  
+
 
  /* ============= Animation background ========= */
 
@@ -239,7 +241,7 @@
     margin-top: -30px;
    background: #EFEEF5;
     text-decoration: none;
-    transform: skew(15deg);
+    transform: skew(8deg);
   }
   /* Logo */
   .logo{
@@ -259,7 +261,7 @@
   }
   /* Header content & title & button*/
   .header-content{
-    margin-top:25%;
+    margin-top:50%;
     text-align: center;
     color:  #EFEEF5;
   }
@@ -304,7 +306,7 @@
   @keyframes cube {
     from {
       transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
+      opacity: 0.2;
     }
     to {
       transform: scale(20) rotate(960deg) translate(-50%, -50%);

@@ -49,6 +49,15 @@ border-color: #005679;
   
 }
 
+#inputSenha{
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+
 
 .divButtonUser{
   flex-direction: row;
@@ -58,4 +67,9 @@ border-color: #005679;
 
 #logoIndex{
   margin-left: 100px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }

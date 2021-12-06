@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="../materialize/css/materialize.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../../css/cadastroUsuario.css">
+    <title>ADM-Cadastro de usuario</title>
+  </head>
+  <body>
+    <div class="background">
+
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+     
+   </div>
+   
+      <div class="content">
+      <form action="../admin/admIndex.html" target="" onsubmit="return false">
+          <img src="../../img/../img/LOGO.png" height="60px" id="logoIndex">
+          <h1>Novo Cadastro</h1>
+          <div class="boxUsuario">
+              <input type="text"  id="inputNomeUsuario" placeholder="Nome Usuario:" onchange="" >
+          </div>
+          <div class="boxUsuario">
+            <input type="password"  id="inputUser" placeholder="senha:" onchange="" >
+          </div>
+          <div class="boxUsuario">
+            <input type="password" id="inputSenha" placeholder="Repetir-Senha:" onchange="" >
+          </div>
+          <div class="boxUsuario">
+            <select  id="inputSelect">
+              <option value="BÁSICA" id="optionSelect">BÁSICO</option>
+              <option value="MEDIA" id="optionSelect">MÉDIO</option>
+              <option value="administrador" id="optionSelect">ADMINISTRADOR</option>
+            </select>
+          </div>
+          <div class="divButtonUser">
+            <button id="buttonUserSenha" onclick="window.location.href='../admin/admIndex.html'">VOLTAR</button>
+            <button  id="buttonUser"  onclick="CriarConta()">SALVAR</button>
+          </div>
+        </form>
+      </div>
+  <script src="../../JS/cadastrarUsuario.js"></script> 
+  </body>
+</html>

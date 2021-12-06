@@ -1,13 +1,13 @@
-let putUrl = "http://localhost:8080/admACreateUsuario"
+let putUrl = "http://192.168.254.4:8080/admACreateUsuario"
 
 let nomeUsuario = document.getElementById('inputNomeUsuario')
 let repetirSenha = document.getElementById('inputUser')
 let senha = document.getElementById('inputSenha')
 let permissao = document.getElementById('inputSelect')
-let optionValue = "basic"
+let optionValue = "BÁSICA"
 
 ///
-//Função de Criação De conta HTTPS: POST 
+//  Função de Criação De conta HTTPS: POST 
 ///
 
 //fetch: Função de busca de dados via HTTPS::: GET
@@ -21,14 +21,13 @@ function CriarConta(){
 //
 function PostData(){
     //Validação de conta
-    if(senha.value == repetirSenha.value && nomeUsuario.value != "" && senha.value != ""){
+    if(senha.value == repetirSenha.value && nomeUsuario.value != "" && senha.value){
      let putValor ={
-        nome_usuario: nomeUsuario.value,
+        nome_usuario: nomeUsuario.value.toUpperCase(),
         senha: senha.value,
-        nome_completo: nomeUsuario.value,
-        permissao: optionValue
+        nome_completo: nomeUsuario.value.toUpperCase(),
+        permissao: optionValue.toUpperCase()
     }
-  
     //Insert post no banco de dados
     fetch(putUrl, {
         method: "POST",
@@ -36,16 +35,13 @@ function PostData(){
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
         .then(response => response.json()) 
-        .then(json =>{
-
+        .then(data =>{
             var toastHTML = `<span>Usuário cadastrado com sucesso</b></span>`;
             M.toast({html: toastHTML});
              nomeUsuario.value = ""
              repetirSenha.value = ""
              senha.value = ""
-
         });
-       
 }
 else{
     var toastHTML = `<span> Senha ou usuario não conferem</b></span>`;

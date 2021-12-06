@@ -10,8 +10,8 @@ let dataMes = data.getMonth() + 1
 let dataDia = data.getDate()
 data = (dataDia+"/"+dataMes+"/"+dataAno)
 
-const UrlGet= "http://localhost:8080/admServicoAll";
-const UrlPost= "http://localhost:8080/basicAAbrirChamado"
+
+const UrlPost= "http://192.168.254.4:8080/basicAAbrirChamado"
 const nomeUsuario = localStorage.getItem('nome');
 var usuario = document.getElementById("usuario").innerHTML = "Usuario: "+nomeUsuario
 

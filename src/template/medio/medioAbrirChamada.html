@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    
+    <link rel="stylesheet" href="../../css/abrirChamado.css">
+    <link rel="stylesheet" href="../../template/materialize/css/materialize.css">
+  
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <title>abrir Chamado</title>
+</head>
+  <body>
+      <div class="divImagem">
+          <img src="../../img/LOGO.png" class="imagem" width="500px"/>
+        </div>
+        <div class="background">
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+          <div class="cube"></div>
+        </div>
+      <div class="header">
+        <div class="conteiner">
+            <div class="content">
+              <form action="../admin/admIndex.html"  target="" onsubmit="return false">
+                  <div class="divSelectSetor">
+                      <p>SETOR: &nbsp</p>
+                        <select name="selectSetor" id= "selectSetor" style="width:240px">
+                            <option value="EXPEDIÇÃO">EXPEDIÇÃO</option>
+                            <option value="FATURAMENTO" selected>FATURAMENTO</option>
+                            <option value="RH">RH</option>
+                            <option value="TELEVENDAS">TELEVENDAS</option>
+                            <option value="COMERCIAL">COMERCIAL</option>
+                            <option value="COMPRAS">COMPRAS</option>
+                            <option value="COBRANÇA">COBRANÇA</option>
+                            <option value="DOCUMENTAÇÃO">DOCUMENTAÇÃO</option>
+                            <option value="FINANCEIRO">FINANCEIRO</option>
+                        </select>
+                  </div>
+                  <div class = "divSelectTipo">
+                    <p>TIPO:  &nbsp</p>
+                    <select name="selectTipo" id="selectTipo" style="width:240px">
+                        <option value="DÚVIDAS">DÚVIDAS</option>
+                        <option value="SUPORTE">SUPORTE</option>
+                    </select>
+                  </div>
+                  <div  class = "divSelectPrioridade">
+                    <p>PRIORIDADE: &nbsp</p>
+                    <select name="selectPrioridade" id="selectPrioridade">
+                        <option value="BAIXA">BAIXA</option>
+                        <option value="MÉDIA">MÉDIA</option>
+                        <option value="ALTA">ALTA</option>
+                    </select>
+                  </div>
+                  <div class="divImagem">
+                    <p>DESCRIÇÃO: </p>
+                    <textarea id = "divtextarea"  maxlength="250" placeholder="Descrição: Max-Caracteres(250)" onchange=""></textarea>
+                </div>
+                <div>
+                  <div class="Divbutton">
+                  <button  id="buttonVoltar" onclick="window.location.href='./medioIndex.html'">VOLTAR</a></button>
+                    <a href="./medioIndex.html"><button  id="buttonAtualizar" onclick="OpenChamada()">ENVIAR</button></a>
+                  </div>
+                    <p id="usuario"></p>
+                </form>
+              
+                <script src="../../JS/abrirChamada.js"></script>
+            </div>
+        </div>
+      </div>
+  </body>
+</html>

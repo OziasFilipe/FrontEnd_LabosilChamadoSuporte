@@ -36,7 +36,7 @@ p{
     font-size: 30px;
 }
 .content{
-    margin: 15px 0px 0px 50px;
+    margin: 3% 0px 0px 30%;
     
 }
 textarea{
@@ -54,7 +54,7 @@ button{
     border: 0;
     background-color: transparent;
     display: block;
-    margin: 20px auto;
+    margin: 2% auto;
     text-align: center;
     border: 2px solid #2ecc71;
     padding: 14px 40px;
@@ -70,7 +70,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 30%;
+    margin-right: 15%;
 }
 #buttonVoltar{
     margin-right: 80px; 
@@ -116,11 +116,13 @@ p{
     color: rgb(255, 255, 255);
 }
 .header{
-    display: block;
+    display: flex;
     margin-left: 100px;
     border-radius: 5px;
     background-color: #ffffff1f;
     width: 550px;
+    align-items: center;
+    height: 100%;
 }
 a{
     color: white;
@@ -138,6 +140,18 @@ a{
         background-color: #34495e;
     }
 
+    .conteiner{
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #fileInput{
+      color: #0F0;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
 /* ============= Animation background ========= */
 
 .cube {
@@ -218,7 +232,7 @@ a{
     margin-top: -30px;
    background: #EFEEF5;
     text-decoration: none;
-    transform: skew(15deg);
+    transform: skew(8deg);
   }
   /* Logo */
   .logo{
@@ -238,7 +252,7 @@ a{
   }
   /* Header content & title & button*/
   .header-content{
-    margin-top:25%;
+    margin-top:50%;
     text-align: center;
     color:  #EFEEF5;
   }
@@ -283,7 +297,7 @@ a{
   @keyframes cube {
     from {
       transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
+      opacity: 0.2;
     }
     to {
       transform: scale(20) rotate(960deg) translate(-50%, -50%);

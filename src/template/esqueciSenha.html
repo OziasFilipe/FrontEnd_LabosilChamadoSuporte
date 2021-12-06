@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="../../src/css/esqueciSenha.css">
+    <link rel="stylesheet" href="../../src/template/materialize/css/materialize.css">
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <title>Logar</title>
+    
+    
+  </head>
+  <body>
+    <form action="../../index.html" target="" onsubmit="return perfilVerificado" id="formulario">
+    <div class="content">
+        <img src="../../src/img/LogoIndex.png" height="200px" id="logoIndex">
+        <div class="boxUsuario">
+          <img src="../../src/img/usuario.png" height="70px">
+          <input type="text"  id="inputUser" placeholder="Digite o nome do usuario:" onchange="" >
+        </div>
+        <div class="boxUsuario">
+            <img src="../../src/img/usuario.png" height="70px">
+            <input type="text"  id="inputEmail" placeholder="Digite o seu email:" onchange="" >
+          </div>
+        <div class="selectSetor">
+        <p>Setor:</p>
+        <select name="selectSetor" id= "inputSelect" >
+            <option value="EXPEDIÇÃO">EXPEDIÇÃO</option>
+            <option value="FATURAMENTO" selected>FATURAMENTO</option>
+            <option value="RH">RH</option>
+            <option value="TELEVENDAS">TELEVENDAS</option>
+            <option value="COMERCIAL">COMERCIAL</option>
+            <option value="COMPRAS">COMPRAS</option>
+            <option value="COBRANÇA">COBRANÇA</option>
+            <option value="DOCUMENTAÇÃO">DOCUMENTAÇÃO</option>
+            <option value="FINANCEIRO">FINANCEIRO</option>
+        </select>
+    </div>
+    <div class="divButtonUser">
+        <button id="buttonVoltar" ><a href="../../index.html">Voltar</a></button>
+        <button  id="buttonUser"   onclick="Validacao()">Salvar</button>
+      </div>
+  </div>
+</form>
+
+
+  <script src="../JS/esqueciSenha.js"></script> 
+  </body>
+</html>

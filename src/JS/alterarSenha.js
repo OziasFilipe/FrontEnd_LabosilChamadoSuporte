@@ -1,5 +1,5 @@
-let getUrl = "http://localhost:8080/usuarioLogin?usuarioLogin="
-let putUrl = "http://localhost:8080/admACreateUsuario"
+let getUrl = "http://192.168.254.4:8080/usuarioLogin?usuarioLogin="
+let putUrl = "http://192.168.254.4:8080/admACreateUsuario"
     let usuario = localStorage.getItem('nome');
     let inputSenha = document.getElementById("inputUser");
     let inputNovaSenha = document.getElementById("inputSenha");

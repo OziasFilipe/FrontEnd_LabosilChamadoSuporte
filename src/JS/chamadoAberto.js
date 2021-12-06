@@ -25,12 +25,13 @@ var valorUsuario = localStorage.getItem('nome');
 //
 //Variavel String URL:
 //
-var UrlGetAll = `http://localhost:8080/basicNomeUsuario?basicNomeUsuario=${valorUsuario}`;
-var UrlGet = "http://localhost:8080/admChamadoAberto?admChamadoAberto=";
-var UrlGetProtocolo = "http://localhost:8080/admProtocoloChamado/";
+var UrlGetAll = `http://192.168.254.4:8080/basicNomeUsuario?basicNomeUsuario=${valorUsuario}`;
+var UrlGet = "http://192.168.254.4:8080/admChamadoAberto?admChamadoAberto=";
+var UrlGetProtocolo = "http://192.168.254.4:8080/admProtocoloChamado/";
+
 //Post get
-let getUrl = "http://localhost:8080/usuarioLogin?usuarioLogin=";
-let putUrl = "http://localhost:8080/admAlterarServico";
+let getUrl = "http://192.168.254.4:8080/usuarioLogin?usuarioLogin=";
+let putUrl = "http://192.168.254.4:8080/admAlterarServico";
 
 //Iniciar em aberto
 fetch(UrlGet+select.value).then(response =>{
