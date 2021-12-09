@@ -65,6 +65,12 @@ button{
     cursor: pointer;
 }
 
+#file{
+  border-radius: 10px;
+  color: #2ecc71;
+ 
+}
+
 .Divbutton{
     flex-direction: row;
     display: flex;

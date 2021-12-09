@@ -28,10 +28,10 @@
       <div class="cube"></div>
    <div class="cube"></div>
  </div>
+ <form action="../admin/admIndex.html"  target="" onsubmit="return false">
     <div class="header">
       <div class="conteiner">
           <div class="content">
-            <form action="../admin/admIndex.html"  target="" onsubmit="return false">
                 <div class="divSelectSetor">
                     <p>SETOR: &nbsp</p>
                       <select name="selectSetor" id= "selectSetor" style="width:240px">
@@ -67,18 +67,20 @@
                   <p>DESCRIÇÃO: </p>
                   <textarea id = "divtextarea"  maxlength="250" placeholder="Descrição: Max-Caracteres(250)" onchange="" ></textarea>
               </div>
-              <div>
-                <input type="file" name="file" id="file"><br>
+              
+                <input type="file" name="file" id="file" >
+              
                 <div class="Divbutton">
                   <button  id="buttonVoltar" onclick="window.location.href='./admIndex.html'" >VOLTAR</button>
-                  <a href="./admIndex.html"><button  id="buttonAtualizar" onclick="OpenChamada()">ENVIAR</button></a>
+                  <button  id="buttonAtualizar" onclick="OpenChamada()">ENVIAR</button>
                 </div>
+                
                   <p id="usuario"></p>
-              </form>
-            
-              <script src="../../JS/abrirChamada.js"></script>
-          </div>
-      </div>
-    </div>
+                  
+                  <script src="../../JS/abrirChamada.js"></script>
+                </div>
+              </div>
+            </div>
+          </form>
       </body>
 </html>

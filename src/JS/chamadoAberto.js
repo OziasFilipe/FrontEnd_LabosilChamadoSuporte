@@ -10,7 +10,6 @@ let teste = document.getElementById("tbody");
 let resolucao = document.getElementById("descricao");
 let fechamentoChamado = document.getElementById('fechamentoChamado')
 
-
 var FiltroData = []
 //Varivavel data
 let data = new Date();
@@ -104,7 +103,6 @@ function buscar(data){
 }
   function FecharChamado(){
     if(resolucao.value != ""){
-    
         let putValor ={
             id: dados.id,
             nome_usuario: dados.nome_usuario,
@@ -116,7 +114,9 @@ function buscar(data){
             protocolo_chamado: dados.protocolo_chamado,
             data_chamado: dados.data_chamado,
             desc_resolucao: resolucao.value,
-            fechamento_chamado: fechamentoData
+            fechamento_chamado: fechamentoData,
+            link_imagem: dados.link_imagem,
+            nome_fechamento: localStorage.getItem('nome')
         }
         console.log(putValor)
        fetch(putUrl, {
@@ -130,13 +130,10 @@ function buscar(data){
            resolucao.value=""
            var toastHTML = `<span>Gravado e fechado com sucesso</b></span>`;
             M.toast({html: toastHTML});
-           
-           
    }
    else{
        var toastHTML = `<span>Descrição não pode ficar vazia</b></span>`;
             M.toast({html: toastHTML});
-            
 
    }
   }

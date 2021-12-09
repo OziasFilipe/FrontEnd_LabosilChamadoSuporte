@@ -96,26 +96,20 @@ fetch(UrlGet+select.value).then(response =>{
                 teste = false
                 contagem = contagem+1
             }
-            
-        }
-       
+        } 
         tbody.innerHTML = dados.join('')
-        
   })
 
   //Funcao de filtro por data de abertura
   function filtroDataAbertura(){
     let dataAbertura = document.getElementById('dataAbertura')
     ConverterData(dataAbertura.value,"abertura");
-
 }
-
  //Funcao de filtro por data de fechamento
 function filtroDataFechamento(){
     let dataFechamento = document.getElementById('dataFechamento')
     ConverterData(dataFechamento.value,"fechamento");
 }
-
  //Funcao converte a data para o formato do banco de dados
 function ConverterData(dataFormato,tipoFiltro){
     function adicionaZero(numero){
@@ -124,7 +118,6 @@ function ConverterData(dataFormato,tipoFiltro){
         else
             return numero; 
     }
-    
     console.log(dataFormato)
     let dataAtual = new Date(dataFormato); //29/01/2020
     let dataAtualFormatada = (adicionaZero(dataAtual.getDate()+1) + "/" + (adicionaZero(dataAtual.getMonth()+1).toString()) + "/" + dataAtual.getFullYear());

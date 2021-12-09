@@ -3,7 +3,7 @@ var selectTipo = document.getElementById('selectTipo');
 var selectPrioridade = document.getElementById('selectPrioridade');
 var textoDescricao = document.getElementById('divtextarea')
 var divtextarea = document.getElementById('divtextarea')
-
+let file = document.getElementById('file');
 let data = new Date();
 let dataAno = data.getFullYear()
 let dataMes = data.getMonth() + 1
@@ -25,9 +25,10 @@ var usuario = document.getElementById("usuario").innerHTML = "Usuario: "+nomeUsu
  const data_chamado = "";
 
 function  OpenChamada(){ 
+    
     if(divtextarea.value != ""){
         postAbrirChamado();
-        SalvarImagem();
+      
         var toastHTML = `<span>O seu chamado foi criado com sucesso</b></span>`;
         M.toast({html: toastHTML});
     }
@@ -50,6 +51,7 @@ fetch(UrlGet).then(response =>{
     //////////////////////////////
      //POST request Abrir Chamado
     //////////////////////////////
+
 const postAbrirChamado = ()=>{
 
     let valueSelectSetor = selectSetor.options[selectSetor.selectedIndex].value;
@@ -62,7 +64,7 @@ const postAbrirChamado = ()=>{
     protocolo = protocolo + aleatorio
 
 //////////////////////////////////
-
+    
     let _data = {
         nome_usuario: nomeUsuario,
         setor: valueSelectSetor,
@@ -71,10 +73,15 @@ const postAbrirChamado = ()=>{
         tipo_chamado: valueSelectTipo,
         prioridade_chamado: valueSelectPrioridade,
         protocolo_chamado: protocolo,
-        data_chamado: data
+        data_chamado: data,
+        desc_resolucao: null,
+        fechamento_chamado: null,
+        link_imagem: protocolo+" - "+file.files[0].name,
+        nome_fechamento: null
     }
+    
         //API_POST 255 
-
+        
     fetch(UrlPost, {
         method: "POST",
         body: JSON.stringify(_data),
@@ -84,24 +91,22 @@ const postAbrirChamado = ()=>{
 
      textoDescricao.value = ""
      var toastHTML = `<span>O seu código do chamado é  # ${protocolo} #</b></span>`;
-        M.toast({html: toastHTML});
-     
-    
+        M.toast({html: toastHTML});   
+        SalvarImagem();
+        
 }
-
-
  //////////////////////////////
      //POST request imagem 
     //////////////////////////////
 
     function SalvarImagem(){
-        let file = document.getElementById('file');
+        
         let formData = new FormData();
         
             console.log(file.files[0])
             formData.append('file',file.files[0])
            
-            fetch("http://localhost:8080/upload",{
+            fetch("http://192.168.254.4:8080/upload",{
                 method: "post",
                 body: formData
             }).catch(console.log('error'));
