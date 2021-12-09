@@ -36,11 +36,14 @@ body{
        margin-left: 20px;
    }
    #divFlexDirectionLinkImage{
-      flex: 1;
+      display: flex;
       padding-left: 75px;
       margin-top: 0px;
       margin-bottom:0px;
       color: #2ecc71;
+      flex-direction: row;
+      align-items: center;
+      
    }
    #divFlexDirectionButton{
       display: flex;

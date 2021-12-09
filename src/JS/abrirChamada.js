@@ -27,6 +27,7 @@ var usuario = document.getElementById("usuario").innerHTML = "Usuario: "+nomeUsu
 function  OpenChamada(){ 
     if(divtextarea.value != ""){
         postAbrirChamado();
+        SalvarImagem();
         var toastHTML = `<span>O seu chamado foi criado com sucesso</b></span>`;
         M.toast({html: toastHTML});
     }
@@ -87,6 +88,27 @@ const postAbrirChamado = ()=>{
      
     
 }
+
+
+ //////////////////////////////
+     //POST request imagem 
+    //////////////////////////////
+
+    function SalvarImagem(){
+        let file = document.getElementById('file');
+        let formData = new FormData();
+        
+            console.log(file.files[0])
+            formData.append('file',file.files[0])
+           
+            fetch("http://localhost:8080/upload",{
+                method: "post",
+                body: formData
+            }).catch(console.log('error'));
+               
+
+        //formData.append('file',)
+    }
 //////////////////////////////
  //////////////////////////////
 //////////////////////////////
