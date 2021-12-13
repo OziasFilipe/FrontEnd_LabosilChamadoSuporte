@@ -11,22 +11,15 @@ let email = document.getElementById('inputEmail')
 let setorSelect = document.getElementById('inputSelect')
 let optionValue = ""
 
-
-
-
 function  Validacao(){
   
     fetch(ApiUserGet+nomeUsuario.value).then(response =>{
         return response.json()
     }).then(data=>{
-        
-        
         if(data.length == 0){
-            
             var toastHTML = '<span>Seu usuario não existe!</span>';
             M.toast({html: toastHTML});
             perfilVerificado = false
-           
         }
         if(nomeUsuario.value == data[0].nome_usuario && email.value !=""){
             var toastHTML = '<span>Chamado Enviado com sucesso</span>';
@@ -41,16 +34,12 @@ function  Validacao(){
         }
     })
 }
-     
-
   //////////////////////////////
      //POST request Abrir Chamado
     //////////////////////////////
     const postAbrirChamado = ()=>{
-
-     
         //Protocolo Gerado aleatoriamente
-        
+
         let protocolo = ""
         let aleatorio =  Math.floor(Math.random() * (9999 - 1 + 1)) + 1
         protocolo = protocolo + aleatorio
@@ -69,7 +58,6 @@ function  Validacao(){
             data_chamado: data
         }
             //API_POST 255 
-    
         fetch(UrlPost, {
             method: "POST",
             body: JSON.stringify(_data),

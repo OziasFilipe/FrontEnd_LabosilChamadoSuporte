@@ -37,13 +37,22 @@ body{
    }
    #divFlexDirectionLinkImage{
       display: flex;
-      padding-left: 75px;
+      padding-left:80px;
       margin-top: 0px;
       margin-bottom:0px;
       color: #2ecc71;
       flex-direction: row;
       align-items: center;
-      
+      font-size: medium;
+   }
+   #linkImagem{
+    display: flex;
+      margin-top: 0px;
+      margin-bottom:0px;
+      color: #2ecc71;
+      flex-direction: row;
+      align-items: center;
+      font-size: medium;
    }
    #divFlexDirectionButton{
       display: flex;
@@ -194,7 +203,7 @@ p{ font-size: 20px; color: white;}
     {
         width: 27%;
     }
-    .teste {
+    .corInput {
         color: white;
         font-weight: bold;
     }
@@ -364,3 +373,46 @@ p{ font-size: 20px; color: white;}
       opacity: 0;
     }
   }
+
+  /* ///////////// Imgem Lithtbox/////////////// */
+  
+img {
+  max-height: 50vh;
+}
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

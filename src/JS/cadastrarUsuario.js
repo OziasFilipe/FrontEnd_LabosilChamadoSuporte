@@ -5,11 +5,9 @@ let repetirSenha = document.getElementById('inputUser')
 let senha = document.getElementById('inputSenha')
 let permissao = document.getElementById('inputSelect')
 let optionValue = "BÁSICA"
-
 ///
 //  Função de Criação De conta HTTPS: POST 
 ///
-
 //fetch: Função de busca de dados via HTTPS::: GET
 //Função Select permissão de conta e chamada da função PostData
 function CriarConta(){
@@ -27,6 +25,7 @@ function PostData(){
         senha: senha.value,
         nome_completo: nomeUsuario.value.toUpperCase(),
         permissao: optionValue.toUpperCase()
+        
     }
     //Insert post no banco de dados
     fetch(putUrl, {

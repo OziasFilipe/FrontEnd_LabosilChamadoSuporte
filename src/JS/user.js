@@ -64,6 +64,7 @@ function validar(){
                             buttonUser.style="background-color:#15769c"
                             perfilVerificado = true;
                             localStorage.setItem('nome',data[0].nome_usuario)
+                            localStorage.setItem('permissao',data[0].permissao)
                     }else{
                         var toastHTML = `<span>Usuário ou senha inválida</b></span>`;
                         M.toast({html: toastHTML});

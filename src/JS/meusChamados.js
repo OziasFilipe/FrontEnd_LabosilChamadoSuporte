@@ -9,8 +9,9 @@ var select = document.getElementById('selectSituacao')
 let teste = document.getElementById("tbody")
 let DescricaoResolucao = document.getElementById('DescriçãoResolucao')
 let fechamentoData = document.getElementById('fechamentoData')
+let linkImagem = document.getElementById('linkImagem')
 
-
+let paginaLink = ''
 // Variavel Filtro Data
 var FiltroData = []
 //
@@ -24,15 +25,30 @@ var UrlGetAll = `http://192.168.254.4:8080/basicNomeUsuario?basicNomeUsuario=${v
 var UrlGet = "http://192.168.254.4:8080/admChamadoAberto?admChamadoAberto=";
 var UrlGetProtocolo = "http://192.168.254.4:8080/admProtocoloChamado/"
 
-
 //Função de busca data da abertura e chamado descrição 
 function buscar(data){
     aberturaChamado.value = data.data_chamado
     Desc.value = data.desc_chamado
     fechamentoData.value = data.fechamento_chamado
+    linkImagem.innerText = "link imagem"
+    
+    if(data.link_imagem == "" || data.link_imagem == null){
+        linkImagem.innerText = 'SEM ANEXOS'
+        paginaLink = ''
+    }else{
+        linkImagem.innerText = data.link_imagem
+        paginaLink = data.link_imagem
+    }
     if(data.desc_resolucao != null ){
-        fechamentoData.value = data.fechamento_chamado
+        fechamentoData.value = data.fechamento_chamado+" - "+data.nome_fechamento
         DescricaoResolucao.value = data.desc_resolucao
+        if(data.link_imagem == "" || data.link_imagem == null){
+            linkImagem.innerText = 'SEM ANEXOS'
+            paginaLink = ''
+        }else{
+            linkImagem.innerText = data.link_imagem 
+            paginaLink = data.link_imagem
+        }
     }
 }
 //Função de Buscar chamado atraves do HTTPS: POST
@@ -60,7 +76,6 @@ function BuscarChamado(){
                     numero = numero+1
                     dados.push(th)
                 }
-               
             }
             //tbody e o corpo da tabela, com essa variavel e possivel incluir elementos Th e Td dentro da tabela de acordo com o Loop acima
             tbody.innerHTML = dados.join('')
@@ -99,7 +114,6 @@ fetch(UrlGet+select.value).then(response =>{
         } 
         tbody.innerHTML = dados.join('')
   })
-
   //Funcao de filtro por data de abertura
   function filtroDataAbertura(){
     let dataAbertura = document.getElementById('dataAbertura')
@@ -181,9 +195,19 @@ function ConverterData(dataFormato,tipoFiltro){
                 tbody.innerHTML = dados.join('')
           })
     }
-    
+}
+function Atualizar(){
 }
 
-function Atualizar(){
-   
+function abrirJanela(pagina, largura, altura) {
+
+    if(paginaLink != ''){
+        pagina = `file://lab-apl-03/Users/ti/Desktop/Arquivos%20EquipeAtendimentoLabosil/BancoImagem/${paginaLink}`
+        // Definindo centro da tela
+        var esquerda = (screen.width - largura)/2;
+        var topo = (screen.height - altura)/2;
+        // Abre a nova janela
+        minhaJanela = window.open(pagina,'','height=' + altura + ', width=' + largura + ', top=' + topo + ', left=' + esquerda);
+    
+    }
 }

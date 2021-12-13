@@ -9,19 +9,20 @@
   
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>Meus Chamados</title>
+    <title>ADM-Meus Chamados</title>
 </head>
 <body>
     <div class="imagem">
-        <img src="../../img/LOGO.png" alt="" width="500px">
+        <img src="../../img/LOGO.png" alt="" width="500px" >
     </div>
+    
     <div class="background">
         <div class="cube"></div>
         <div class="cube"></div>
         <div class="cube"></div>
         <div class="cube"></div>
-        <div class="cube"></div>
-   </div>
+       <div class="cube"></div>
+     </div>
     <div class="header">
         <div class="conteiner">
             <div class="conteint"> 
@@ -36,7 +37,7 @@
                         <input type="date" width="100px" onchange="filtroDataFechamento()" id="dataFechamento" data-date-format="DD MMMM YYYY" >
                     </div>
                     <div class="status" id="divFlexDirection">
-                        <p>SITUAÇÃO:&nbsp </p>
+                        <p>SITUAÇÃO:&nbsp</p>
                         <select name="" id="selectSituacao" onclick="BuscarChamado()">
                             <option value="Aberto">ABERTO</option>
                             <option value="Fechado">FECHADO</option>
@@ -61,18 +62,17 @@
                                 <td>Suporte</td>
                                 <td>Aberto</td>
                             </tr>
-                            
                         </tbody>
                     </table>
                     </div>
                     <div class="abchamado" id="divFlexDirection">
                         <p>ABERTURA DO CHAMADO: &nbsp</p>
-                        <input class="teste" type="" disabled placeholder="00/00/0000" id="aberturaChamado">
+                        <input class="corInput" type="" disabled placeholder="00/00/0000" id="aberturaChamado">
                     </div>
 
                     <div class="fcchamado" id="divFlexDirection">
                         <p>FECHAMENTO DO CHAMADO: &nbsp</p>
-                        <input class="teste" type="" disabled placeholder="00/00/0000" id="fechamentoData">
+                        <input class="corInput" type="" disabled placeholder="00/00/0000 - NAME" id="fechamentoData">
                     </div>
 
                     <div class="descricao" id="divFlexDirection">
@@ -84,18 +84,22 @@
                         <p>RESOLUÇÃO: &nbsp</p>
                         <textarea disabled placeholder="Descrição" id="DescriçãoResolucao"></textarea>
                     </div>
+                    <div id="divFlexDirectionLinkImage">
+                        <p style="color:rgb(255, 255, 255)" id="divFlexDirectionLinkImage">NOME DA IMAGEM: &nbsp</p>
+                        <a href="#" onclick="javascript:abrirJanela('file://lab-apl-03/Users/ti/Desktop/Arquivos%20EquipeAtendimentoLabosil/BancoImagem/VAGNER 5 º.jpg', 600, 450);" id="linkImagem">SEM ANEXOS</a>
+                    </div>
                     <div id="divFlexDirectionButton">
-                        <a href="./medioIndex.html"><button  id="buttonVoltar" >VOLTAR</button></a>
+                         <button  id="buttonVoltar" onclick="window.location.href='./medioIndex.html'" >VOLTAR</button>
                         <a href="./medioMeusChamados.html"><button  id="buttonEnviar" >ATUALIZAR</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="../../JS/meusChamados.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
 </body>
 </html>

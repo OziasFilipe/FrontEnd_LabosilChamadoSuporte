@@ -14,23 +14,24 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
-    <title>Abrir Chamado</title>
+    <title>ADM-abrir Chamado</title>
 </head>
 <body>
+  
     <div class="divImagem">
         <img src="../../img/LOGO.png" class="imagem" width="500px"/>
       </div>
-      <div class="background">
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-   </div>
+    <div class="background">
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+      <div class="cube"></div>
+   <div class="cube"></div>
+ </div>
+ <form action="../admin/admIndex.html"   onsubmit="return false">
     <div class="header">
       <div class="conteiner">
           <div class="content">
-            <form action="../admin/admIndex.html"  target="" onsubmit="return false">
                 <div class="divSelectSetor">
                     <p>SETOR: &nbsp</p>
                       <select name="selectSetor" id= "selectSetor" style="width:240px">
@@ -43,6 +44,8 @@
                           <option value="COBRANÇA">COBRANÇA</option>
                           <option value="DOCUMENTAÇÃO">DOCUMENTAÇÃO</option>
                           <option value="FINANCEIRO">FINANCEIRO</option>
+                          <option value="FINANCEIRO">FARMACÊUTICA</option>
+                          <option value="FINANCEIRO">S.A.C</option>
                       </select>
                 </div>
                 <div class = "divSelectTipo">
@@ -62,19 +65,22 @@
                 </div>
                 <div class="divImagem">
                   <p>DESCRIÇÃO: </p>
-                  <textarea id = "divtextarea"  maxlength="250" placeholder="Descrição: Max-Caracteres(250)" onchange=""></textarea>
+                  <textarea id = "divtextarea"  maxlength="250" placeholder="Descrição: Max-Caracteres(250)" onchange="" ></textarea>
               </div>
-              <div>
+              
+                <input type="file" name="file" id="file" >
+              
                 <div class="Divbutton">
-                 <button  id="buttonVoltar" onclick="window.location.href='./basicIndex.html'">VOLTAR</button>
-                  <a href="./admIndex.html"><button  id="buttonAtualizar" onclick="OpenChamada()">ENVIAR</button></a>
+                  <button  id="buttonVoltar" onclick="window.location.href='./basicIndex.html'" >VOLTAR</button>
+                  <button  id="buttonAtualizar"  onclick="OpenChamada() ">ENVIAR</button>
                 </div>
+                
                   <p id="usuario"></p>
-              </form>
-            
-              <script src="../../JS/abrirChamada.js"></script>
-          </div>
-      </div>
-    </div>
+                  
+                  <script src="../../JS/abrirChamada.js"></script>
+                </div>
+              </div>
+            </div>
+          </form>
       </body>
 </html>
