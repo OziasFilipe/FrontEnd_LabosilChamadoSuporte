@@ -97,7 +97,7 @@ function buscar(data){
     Desc.value = data.desc_chamado
     fechamentoData.value = data.fechamento_chamado
     linkImagem.innerText = "link imagem"
-    
+    resolucao.value = data.desc_resolucao
     if(data.link_imagem == "" || data.link_imagem == null){
         linkImagem.innerText = 'SEM ANEXOS'
         paginaLink = ''
@@ -108,6 +108,8 @@ function buscar(data){
     if(data.desc_resolucao != null ){
         fechamentoData.value = data.fechamento_chamado+" - "+data.nome_fechamento
         DescricaoResolucao.value = data.desc_resolucao
+        resolucao.value = data.desc_resolucao
+        
         if(data.link_imagem == "" || data.link_imagem == null){
             linkImagem.innerText = 'SEM ANEXOS'
             paginaLink = ''
@@ -236,7 +238,6 @@ function buscar(data){
         }
     }
     function abrirJanela(pagina, largura, altura) {
-
         if(paginaLink != ''){
             pagina = `file://lab-apl-03/Users/ti/Desktop/Arquivos%20EquipeAtendimentoLabosil/BancoImagem/${paginaLink}`
             // Definindo centro da tela
@@ -244,6 +245,6 @@ function buscar(data){
             var topo = (screen.height - altura)/2;
             // Abre a nova janela
             minhaJanela = window.open(pagina,'','height=' + altura + ', width=' + largura + ', top=' + topo + ', left=' + esquerda);
-        
         }
     }
+    
